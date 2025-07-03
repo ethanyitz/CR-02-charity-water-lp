@@ -173,7 +173,6 @@ section {
   height: 130px;              /* Show only the middle part of the logo (120px logo + 2*10px crop) */
   /* 0.1 inch = ~10px cropped from top and bottom */
 }
-
 /* Logo image style */
 .logo-img {
   height: 250px;              /* Make the logo taller than the .logo-bar */
@@ -183,11 +182,59 @@ section {
   margin-bottom: 500px;       /* Crop bottom 0.1 inch */
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
+/* Newsletter box styles */
+.newsletter-box {
+  /* Position in the top right corner */
+  position: absolute;
+  top: 15px;
+  right: 32px;
+  background: #fff;
+  padding: 10px;        /* Smaller padding */
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  color: #003366;
+  width: 260px;        /* Increased width */
+  z-index: 5;
+  text-align: left;
+}
+
+/* Newsletter headline style */
+.newsletter-box h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1em;       /* Smaller font size */
+  color: #2E9DF7; /* Blue accent */
+}
+
+/* Newsletter input field style */
+.newsletter-input {
+  width: 100%;
+  padding: 6px;         /* Smaller input */
+  margin-bottom: 6px;
+  border: 1px solid #8BD1CB; /* Light blue border */
+  border-radius: 4px;
+  font-size: 0.95em;    /* Slightly smaller font */
+  box-sizing: border-box;
+}
+
+/* Newsletter subscribe button style */
+.newsletter-button {
+  width: 100%;
+  padding: 6px;         /* Smaller button */
+  background-color: #FFC907; /* Yellow background */
+  color: #003366;            /* Dark blue text */
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95em;    /* Slightly smaller font */
+  transition: background 0.2s;
+}
+
+.newsletter-button:hover {
+  background-color: #2E9DF7; /* Blue on hover */
+  color: #fff;
+}
 
 /* This media query applies styles when the screen is 600px wide or less (like on most phones) */
 @media (max-width: 600px) {
@@ -227,6 +274,14 @@ section {
   .impact-image {
     width: 90%;    /* Make image take up most of the width */
     max-width: 220px;
+  }
+
+  /* Make sure the newsletter box is easy to see on small screens */
+  .newsletter-box {
+    position: static;   /* Remove absolute positioning */
+    width: 100%;        /* Full width */
+    margin-bottom: 18px;
+    box-sizing: border-box;
   }
 }
 
