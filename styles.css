@@ -185,7 +185,7 @@ section {
   background: #f4f8fb;
   padding: 0px;        /* Smaller padding */
   border-radius: 4px;
-  color: #003366;
+  color: #FFC907;
   width: 260px;        /* Increased width */
   z-index: 5;
   text-align: left;
@@ -214,7 +214,7 @@ section {
 .newsletter-button {
   width: 100%;
   padding: 6px;         /* Smaller button */
-  background-color: #FFC907; /* Yellow background */
+  background-color: #939e9d; /* Yellow background */
   color: #003366;            /* Dark blue text */
   border: none;
   border-radius: 4px;
@@ -225,7 +225,7 @@ section {
 }
 
 .newsletter-button:hover {
-  background-color: #2E9DF7; /* Blue on hover */
+  background-color: #8BD1CB; /* Blue on hover */
   color: #fff;
 }
 
