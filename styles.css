@@ -28,7 +28,7 @@ body {
   background-color: #f4f8fb;
   background-image: url('img/CWPHI.jpg');
   background-size: cover;         /* Cover the whole width and height */
-  background-position: center 96px;    /* Center the image and move it down by 1 inch (96px) */
+  background-position: center 105px;    /* Center the image and move it down by 1 inch (96px) */
   background-repeat: no-repeat;   /* Do not repeat the image */
   background-attachment: fixed;   /* Keep background fixed when scrolling */
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
@@ -162,9 +162,9 @@ section {
 
 /* Logo bar at the top with white background and padding */
 .logo-bar {
-  background: #fff;           /* White background */
+  background: #f4f8fb;           /* White background */
   padding-top: 0;             /* No extra space above */
-  padding-bottom: 0;          /* No extra space below */
+  padding-bottom: -100;          /* No extra space below */
   padding-left: 32px;         /* Align with .hero left padding */
   width: 25%;
   box-sizing: border-box;
@@ -175,23 +175,22 @@ section {
 }
 /* Logo image style */
 .logo-img {
-  height: 250px;              /* Make the logo taller than the .logo-bar */
+  height: 300px;
   width: auto;
   display: block;
-  margin-top: -110px;          /* Move image up to crop top 0.1 inch */
-  margin-bottom: 500px;       /* Crop bottom 0.1 inch */
+  margin-top: -120px;
+  margin-bottom: -10px; /* Crop bottom by 0.1 inch (~10px) */
 }
 
 /* Newsletter box styles */
 .newsletter-box {
   /* Position in the top right corner */
   position: absolute;
-  top: 15px;
+  top: 5px;
   right: 32px;
-  background: #fff;
-  padding: 10px;        /* Smaller padding */
+  background: #f4f8fb;
+  padding: 0px;        /* Smaller padding */
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   color: #003366;
   width: 260px;        /* Increased width */
   z-index: 5;
