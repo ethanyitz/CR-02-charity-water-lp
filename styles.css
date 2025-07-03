@@ -27,14 +27,19 @@ Fonts:
 body {
   background-color: #f4f8fb;
   background-image: url('img/CWPHI.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover;         /* Cover the whole width and height */
+  background-position: center 96px;    /* Center the image and move it down by 1 inch (96px) */
+  background-repeat: no-repeat;   /* Do not repeat the image */
+  background-attachment: fixed;   /* Keep background fixed when scrolling */
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 24px; /* Add space around all text so it's not at the edge */
   color: #FFC907;
+  text-align: left; /* Move all text to the left */
+  /* The overlay is added below to make the image less bright */
 }
+
+
 
 /* Remove all box styles from sections */
 section {
@@ -42,8 +47,12 @@ section {
   margin: 0;
   padding: 0;
   color: #FFC907;
+  text-align: left; /* Make sure section text is left-aligned */
+  padding-left: 32px;  /* Move text away from the left edge */
+  padding-top: 120px;  /* Move text down so it doesn't cover the face */
+  padding-right: 32px;  /* Add right padding */
+  padding-bottom: 32px; /* Add bottom padding */
 }
-
 /* Remove all box styles from hero section */
 .hero {
   position: relative;
@@ -52,11 +61,16 @@ section {
   background-position: initial;
   background-repeat: initial;
   color: #FFC907;
-  text-align: center;
+  text-align: left;
+  padding-left: 32px;
+  padding-top: 120px;
+  padding-right: 32px;
+  padding-bottom: 32px;
   padding: 0;
   border-radius: 0;
   background-blend-mode: initial;
   background-color: transparent;
+  margin-top: 96px; /* Lower the hero section by 1 inch (96px) */
 }
 
 /* Make the headline bold and modern */
@@ -81,7 +95,11 @@ section {
 .story {
   background-color: transparent;
   color: #FFC907;
-  text-align: center;
+  text-align: left;      /* Left-align text in these sections */
+  padding-left: 32px;    /* Move text to the right */
+  padding-top: 40px;     /* Add some space from the top */
+  padding-right: 32px;  /* Add right padding */
+  padding-bottom: 32px; /* Add bottom padding */
   padding: 0;
 }
 
@@ -96,7 +114,11 @@ h2 {
 .call-to-action {
   background-color: transparent;
   color: #FFC907;
-  text-align: center;
+  text-align: left;      /* Left-align text in these sections */
+  padding-left: 32px;    /* Move text to the right */
+  padding-top: 40px;     /* Add some space from the top */
+  padding-right: 32px;  /* Add right padding */
+  padding-bottom: 32px; /* Add bottom padding */
   padding: 0;
 }
 
@@ -112,8 +134,8 @@ h2 {
 /* Remove all box styles from donate button */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #FFC907; /* Make donate button text yellow */
+  background-color: #939e9d; /* Green */
+  color: #003366; /* Make donate button text yellow */
   padding: 14px 32px;
   text-decoration: none;
   border-radius: 0;
@@ -128,14 +150,32 @@ h2 {
 
 /* Change button color when hovered */
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  color: #FFC907; /* Keep donate button text yellow on hover */
+  background-color: #8BD1CB; /* Dark Green */
+  color: #003366; /* Keep donate button text yellow on hover */
   transform: translateY(-2px) scale(1.04); /* Slight lift */
 }
 
 /* Add some spacing between sections */
 section {
   margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Logo bar at the top with white background and padding */
+.logo-bar {
+  background: #fff;           /* White background */
+  padding-top: 10px;          /* 0.1 inch above the logo (1in = 96px, so 0.1in ≈ 10px) */
+  padding-bottom: 10px;       /* 0.1 inch below the logo */
+  padding-left: 32px;         /* Align with .hero left padding */
+  width: 25%;
+  box-sizing: border-box;     /* Use standard box-sizing */
+}
+
+/* Logo image style */
+.logo-img {
+  height: 350px;    /* Make the logo look like a rectangle (wider than tall) */
+  width: auto;      /* Keep aspect ratio */
+  display: block;   /* Display as a block element */
+  margin-bottom: 0; /* No extra space below */
 }
 
 /* 
@@ -166,7 +206,10 @@ section {
   .story,
   .call-to-action,
   .donation-section {
-    padding: 0; /* Remove padding */
+    padding-left: 12px;  /* Less left padding on small screens */
+    padding-top: 40px;   /* Less top padding on small screens */
+    padding-right: 12px;  /* Add right padding for small screens */
+    padding-bottom: 16px; /* Add bottom padding for small screens */
     color: #FFC907; /* Make text yellow on small screens */
   }
 
