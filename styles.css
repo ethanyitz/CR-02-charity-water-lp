@@ -103,6 +103,14 @@ section {
   padding: 0;
 }
 
+/* Limit the width of the story paragraph to 40% of the page */
+.story-text {
+  width: 40%;
+  min-width: 200px; /* Make sure it's not too narrow on small screens */
+  max-width: 100%;  /* Don't let it overflow */
+  text-align: left;  /* Keep text left-aligned */
+}
+
 /* Add accent color to section headings */
 h2 {
   color: #FFC907; /* Make all h2 headings yellow */
@@ -141,7 +149,7 @@ h2 {
   border-radius: 0;
   font-weight: bold;
   font-size: 1.1em;
-  margin-top: 18px;
+  margin-top: 65px; /* Lower the donate button by 0.75 inch (0.75in = 54px) */
   box-shadow: none;
   transition: background 0.3s, transform 0.2s;
   border: none;
