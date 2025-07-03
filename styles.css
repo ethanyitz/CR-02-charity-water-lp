@@ -163,19 +163,24 @@ section {
 /* Logo bar at the top with white background and padding */
 .logo-bar {
   background: #fff;           /* White background */
-  padding-top: 10px;          /* 0.1 inch above the logo (1in = 96px, so 0.1in ≈ 10px) */
-  padding-bottom: 10px;       /* 0.1 inch below the logo */
+  padding-top: 0;             /* No extra space above */
+  padding-bottom: 0;          /* No extra space below */
   padding-left: 32px;         /* Align with .hero left padding */
   width: 25%;
-  box-sizing: border-box;     /* Use standard box-sizing */
+  box-sizing: border-box;
+  /* Use overflow hidden to crop the logo image */
+  overflow: hidden;
+  height: 130px;              /* Show only the middle part of the logo (120px logo + 2*10px crop) */
+  /* 0.1 inch = ~10px cropped from top and bottom */
 }
 
 /* Logo image style */
 .logo-img {
-  height: 350px;    /* Make the logo look like a rectangle (wider than tall) */
-  width: auto;      /* Keep aspect ratio */
-  display: block;   /* Display as a block element */
-  margin-bottom: 0; /* No extra space below */
+  height: 250px;              /* Make the logo taller than the .logo-bar */
+  width: auto;
+  display: block;
+  margin-top: -110px;          /* Move image up to crop top 0.1 inch */
+  margin-bottom: 500px;       /* Crop bottom 0.1 inch */
 }
 
 /* 
