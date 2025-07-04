@@ -229,17 +229,27 @@ section {
   color: #fff;
 }
 
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
+/* Responsive styles for different screen sizes */
+
+/* For phones (screen width 600px or less) */
 @media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 0; /* Remove padding */
-    font-size: 1em;
+  /* Make the logo smaller */
+  .logo-img {
+    height: 90px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  /* Make headline font size smaller so it fits on small screens */
+  /* Make hero section padding smaller */
+  .hero {
+    padding: 0 8px;
+    margin-top: 24px;
+  }
+
+  /* Make headline font size smaller */
   .hero h1 {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    text-align: left;
   }
 
   /* Make subheadline font size smaller */
@@ -247,51 +257,105 @@ section {
     font-size: 1em;
   }
 
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding-left: 12px;  /* Less left padding on small screens */
-    padding-top: 40px;   /* Less top padding on small screens */
-    padding-right: 12px;  /* Add right padding for small screens */
-    padding-bottom: 16px; /* Add bottom padding for small screens */
-    color: #FFC907; /* Make text yellow on small screens */
+  /* Make story section padding smaller */
+  .story {
+    padding: 0 8px;
+    margin-top: 24px !important;
   }
 
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
+  /* Make story text take full width on small screens */
+  .story-text {
+    width: 100%;
+    min-width: 0;
   }
 
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
+  /* Call-to-action section padding smaller */
+  .call-to-action {
+    padding: 0 8px;
   }
 
-  /* Make sure the newsletter box is easy to see on small screens */
+  /* Lower donate button a bit less on small screens */
+  .donate-button {
+    margin-top: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+  }
+
+  /* Newsletter box full width and static position */
   .newsletter-box {
-    position: static;   /* Remove absolute positioning */
-    width: 100%;        /* Full width */
-    margin-bottom: 18px;
+    position: static;
+    width: 100%;
+    margin: 16px 0;
     box-sizing: border-box;
   }
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
+/* For tablets (screen width between 601px and 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .logo-img {
+    height: 160px;
   }
+  .hero {
+    padding: 0 16px;
+    margin-top: 48px;
+  }
+  .hero h1 {
+    font-size: 1.8em;
+  }
+  .story {
+    padding: 0 16px;
+    margin-top: 48px !important;
+  }
+  .story-text {
+    width: 70%;
+  }
+  .call-to-action {
+    padding: 0 16px;
+  }
+  .donate-button {
+    margin-top: 36px;
+    font-size: 1em;
+  }
+  .newsletter-box {
+    width: 60%;
+    right: 16px;
+    top: 8px;
+  }
+}
 
-  .impact-image {
-    width: 300px;
+/* For computers (screen width greater than 900px) */
+@media (min-width: 901px) {
+  .logo-img {
+    height: 290px;
+  }
+  .hero {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 96px;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+  }
+  .story {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 0.75in !important;
+  }
+  .story-text {
+    width: 40%;
+  }
+  .call-to-action {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .donate-button {
+    margin-top: 54px;
+    font-size: 1.1em;
+  }
+  .newsletter-box {
+    width: 260px;
+    right: 32px;
+    top: 5px;
   }
 }
