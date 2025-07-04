@@ -87,8 +87,10 @@ section {
 .hero p {
   font-size: 1.2em;
   margin-top: 0;
+  margin-bottom: 4px; /* Bring lines closer together */
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
   color: #FFC907; /* Make hero subheadline yellow */
+  line-height: 1.2; /* Reduce space between lines */
 }
 
 /* Remove all box styles from story section */
